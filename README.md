@@ -1,7 +1,7 @@
 ﻿
 ## Introduction
 
-This is the accompany repository for the paper
+This is an accompanying repository for the paper
 
 Peter Phillips and Zhentao Shi (2018): "Boosting the Hodrick-Prescott Filter" (to provide the arxiv link)
 
