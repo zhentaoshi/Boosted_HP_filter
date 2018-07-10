@@ -44,3 +44,5 @@ bx_ADF = BoostedHP(IRE, lambda = lam, iter= TRUE, test_type = "adf", sig_p = 0.0
 outcome = cbind(IRE, bx_HP$trend, bx_BIC$trend, bx_ADF$trend) 
 matplot(  outcome, type = "l", ylab = "", lwd = rep(2,4)  )
 ```
+This is the simple pictrue after the matplot command above:
+![image](https://github.com/chenyang45/BoostedHP/blob/master/work_memo/readme_example_plot.png)
