@@ -16,4 +16,10 @@ We welcome comments about the paper and the code.
 
 #### Future Plan
 
-We will develop the code into an R package to facilitate installation. The current `testing_example.R` will be demonstrated by `example(BoostedHP)`.
+A very preliminary R package can be installed by running in `R`
+```
+library(devtools)
+install_github("zhentaoshi/Boosted_HP_filter/BoostedHP")
+library(BoostedHP)
+```
+The package is in progress with assistance from [Yang Chen](https://github.com/chenyang45).
