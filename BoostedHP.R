@@ -36,6 +36,7 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
 
   # Outputs
   #   $cycle: the cyclical components in the final round
+  #   $trend: the trend component in the final round
   #   $trend_hist: the estimated trend in each iteration
   #   $iter_num: the total number of iterations
   #   $IC_hist: the path of the information criterion along the iterations
@@ -107,9 +108,6 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
         # we use the critical value for the ADF distribution with
         # the intercept and linear trend specification
 
-        # adf_p_r =  ur.df( x_c, type = "none",  lags = 1); #  trunc((length(x_c)-1)^(1/3) ) )
-        # adf_p_r = 0.06 * ( adf_p_r@teststat > - 2.6 )
-        # adf_p_r = unitrootTest(x_c, type = "nc", lags = trunc((length(x_c)-1)^(1/3) )  )@test$p.value
         adf_p[r] <- adf_p_r
 
         sig_p = sig_p # + 0.001 # due to the way that R reports the p-value
@@ -155,8 +153,6 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
 
 
         while( r < Max_Iter ) {
-          # while r CAN not be <= Max_Iter because the following command r <- r+1, it will produce out of bound of script error
-
           r <- r + 1
 
           x_c_r = I_S_r %*% x  # this is the cyclical component after m iterations
