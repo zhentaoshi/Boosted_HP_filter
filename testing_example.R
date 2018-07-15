@@ -3,7 +3,7 @@ rm(list = ls() )
 load("Ireland_GDP.RData") # Ireland Annual GDP example in the paper
 source("BoostedHP.R")
 
-lam = 100 # tuning parameter for the annaul data
+lam = 100 # tuning parameter for the annual data
 
 # raw HP filter
 bx_HP = BoostedHP(IRE, lambda = lam, iter= FALSE)
