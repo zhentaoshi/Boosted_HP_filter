@@ -135,10 +135,7 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
                       adf_p_hist= adf_p, iter_num = R,
                       trend  = x - x_c)
     } else  {
-      
-      ### compute BIC
-      message( "iterated HP filter with BIC criterion")
-      
+
       # assignment
       r <- 0
       x_c_r <- x
@@ -162,11 +159,15 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
         
         I_S_r = I_S_0 %*% I_S_r # update for the next round
         
-        if (  test_type == "BIC"){
+        if (  test_type == "BIC") {
           if  (r >= 2) { 
-            if (  IC[r-1] < IC[r] )   {break}
-          }
-        }
+            if (  IC[r-1] < IC[r] )   {
+              break; 
+              message( "iterated HP filter with BIC criterion")
+              }
+        } else {
+          message( "iterated HP filter until Max_Iter")}
+        } # end of the type judgement
         
       } # end of the while loop
       
