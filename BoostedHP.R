@@ -84,12 +84,22 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
   
   ## the boosted HP filter
   
+  
   if(iter==TRUE) {
+    
+    
+    if (test_type == "adf"){
+      message("iterated HP filter with ADF test criterion")
+    } else if ( test_type == "BIC"){
+      message( "iterated HP filter with BIC criterion")
+    }  else if ( test_type == "none" ) {
+      message( "iterated HP filter until Max_Iter")
+    }   
+    
     
     
     ### ADF test as the stopping criterion
     if (test_type =="adf"  ) {
-      message("iterated HP filter with ADF test criterion")
       
       r <- 1
       stationary <- FALSE
@@ -135,7 +145,7 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
                       adf_p_hist= adf_p, iter_num = R,
                       trend  = x - x_c)
     } else  {
-
+      
       # assignment
       r <- 0
       x_c_r <- x
@@ -159,17 +169,15 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
         
         I_S_r = I_S_0 %*% I_S_r # update for the next round
         
-        if (  test_type == "BIC") {
-          if  (r >= 2) { 
-            if (  IC[r-1] < IC[r] )   {
-              break; 
-              message( "iterated HP filter with BIC criterion")
-              }
-        } else {
-          message( "iterated HP filter until Max_Iter")}
-        } # end of the type judgement
+        if  ( (r >= 2) & (  test_type == "BIC") )  { 
+          if (  IC[r-1] < IC[r] )   { break  }
+        } 
         
       } # end of the while loop
+      
+      # the message
+      
+      
       
       # final assignment
       R = r - 1;
@@ -180,8 +188,6 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
       result <- list( cycle = x_c, trend_hist = x_f,  test_type = test_type,
                       IC_hist = IC, iter_num = R, trend =  x- x_c  )
     }
-    
-    # end of the BIC judgement
     
   } # end the boosted HP
   
