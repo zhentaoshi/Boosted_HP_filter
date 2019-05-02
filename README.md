@@ -3,7 +3,7 @@
 
 This is an accompanying repository for the paper:
 
-Peter Phillips and Zhentao Shi (2018): "Boosting the Hodrick-Prescott Filter" (to provide the arxiv link)
+Peter Phillips and Zhentao Shi (2018): "[Boosting the Hodrick-Prescott Filter](https://arxiv.org/abs/1905.00175)"
 
 We offer two R script files.
 
