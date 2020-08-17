@@ -1,4 +1,4 @@
-﻿
+
 ## Introduction
 
 This is an accompanying repository for the paper:
@@ -11,7 +11,6 @@ We offer two R script files.
 The inputs and outputs are detailed in the beginning of the function.
 * `testing_example.R` is a script to demonstrate the usage of the filtering procedure.
 
-We welcome comments about the paper and the code.
-
-Yang Chen is developing the code here into an R package [BoostedHP](https://github.com/chenyang45/BoostedHP).
-Though it is at a very preliminary stage, it can be installed and implemented in R.
+### R Package
+R package [BoostedHP](https://github.com/chenyang45/BoostedHP) is available. 
+See the [vignette](https://github.com/chenyang45/BoostedHP/blob/master/vignettes/vignette.pdf) for usage.
