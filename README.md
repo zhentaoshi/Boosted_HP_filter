@@ -4,7 +4,7 @@
 
 This is the repository for 
 
-Peter Phillips and Zhentao Shi (2019): "[Boosting the Hodrick-Prescott Filter](https://arxiv.org/abs/1905.00175)"
+Peter Phillips and Zhentao Shi (2019): "[Boosting: Why You Can Use the HP Filter ](https://arxiv.org/abs/1905.00175)"
 
 in MATLAB and R.
 
