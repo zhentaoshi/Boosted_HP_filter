@@ -9,10 +9,10 @@ lam = 100 # tuning parameter for the annual data
 bx_HP = BoostedHP(IRE, lambda = lam, iter= FALSE)
 
 # by BIC
-bx_BIC = BoostedHP(IRE, lambda = lam, iter= TRUE, test_type = "BIC")
+bx_BIC = BoostedHP(IRE, lambda = lam, iter= TRUE, stopping = "BIC")
 
 # by ADF
-bx_ADF = BoostedHP(IRE, lambda = lam, iter= TRUE, test_type = "adf", sig_p = 0.050)
+bx_ADF = BoostedHP(IRE, lambda = lam, iter= TRUE, stopping = "adf", sig_p = 0.050)
 
 # summarize the outcome
 outcome = cbind(IRE, bx_HP$trend, bx_BIC$trend, bx_ADF$trend) 

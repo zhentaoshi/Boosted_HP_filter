@@ -1,22 +1,7 @@
-# Boosting the Hodrick-Prescott Filter
-# by Peter Phillips and Zhentao Shi (2018)
-#
-#================================================================
-# R version 3.4.3 (2017-11-30) -- "Kite-Eating Tree"
-# Copyright (C) 2017 The R Foundation for Statistical Computing
-# Platform: x86_64-w64-mingw32/x64 (64-bit)
-# Date: 2018-07-15
-# by Zhentao Shi, zhentao.shi@cuhk.edu.hk
-#    Chen Yang,   chen_yang@link.cuhk.edu.hk
-#
-# ===============================================================
-#
-# Version 0.5
-
 library(tseries)
 library(expm)
 
-BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0.050, Max_Iter = 100) {
+BoostedHP = function(x, lambda = 1600, iter= TRUE, stopping = "nonstop", sig_p = 0.050, Max_Iter = 100) {
   
   
   # Require Package: tseries, expm
@@ -27,11 +12,11 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
   #   iter: logical.
   #       If iter = FALSE, the function returns the simple HP filter (fit only once).
   #       If iter = TRUE, the boosted HP filter.
-  #   test_type (stopping criterion):
+  #   stopping (stopping criterion):
   #       If ="adf" or "BIC", the two stopping criteria in the paper.
-  #       If = "none", iterated until Max_Iter
+  #       If = "nonstop", iterated until Max_Iter
   #   sig_p: the significance level of the ADF test as the stopping criterion.
-  #           It is useful only when test_type == "adf".
+  #           It is useful only when stopping == "adf".
   #   Max_Iter: the maximum number of iterations.
   
   # Outputs
@@ -88,18 +73,18 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
   if(iter==TRUE) {
     
     
-    if (test_type == "adf"){
+    if (stopping == "adf"){
       message("iterated HP filter with ADF test criterion")
-    } else if ( test_type == "BIC"){
+    } else if ( stopping == "BIC"){
       message( "iterated HP filter with BIC criterion")
-    }  else if ( test_type == "none" ) {
+    }  else if ( stopping == "nonstop" ) {
       message( "iterated HP filter until Max_Iter")
     }   
     
     
     
     ### ADF test as the stopping criterion
-    if (test_type =="adf"  ) {
+    if (stopping =="adf"  ) {
       
       r <- 1
       stationary <- FALSE
@@ -121,7 +106,7 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
         adf_p[r] <- adf_p_r
         
         sig_p = sig_p # + 0.001 # due to the way that R reports the p-value
-        if(test_type == "adf")   stationary <- (adf_p_r <= sig_p)
+        if(stopping == "adf")   stationary <- (adf_p_r <= sig_p)
         
         
         # Truncate the storage matrix and vectors
@@ -141,7 +126,7 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
                 The residual cycle remains non-stationary.")
       }
       
-      result <- list( cycle = x_c, trend_hist = x_f,  test_type = test_type,
+      result <- list( cycle = x_c, trend_hist = x_f,  stopping = stopping,
                       adf_p_hist= adf_p, iter_num = R,
                       trend  = x - x_c)
     } else  {
@@ -169,7 +154,7 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
         
         I_S_r = I_S_0 %*% I_S_r # update for the next round
         
-        if  ( (r >= 2) & (  test_type == "BIC") )  { 
+        if  ( (r >= 2) & (  stopping == "BIC") )  { 
           if (  IC[r-1] < IC[r] )   { break  }
         } 
         
@@ -185,7 +170,7 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, test_type = "none", sig_p = 0
       x_c <- x - x_f[,R]
       # browser()
       
-      result <- list( cycle = x_c, trend_hist = x_f,  test_type = test_type,
+      result <- list( cycle = x_c, trend_hist = x_f,  stopping = stopping,
                       IC_hist = IC, iter_num = R, trend =  x- x_c  )
     }
     
