@@ -14,7 +14,7 @@ stopping ="BIC" ;
 
 %% by ADF
 iter = true;
-stopping ="adf" ; 
+stopping ="adf" ; % this option requires Matlab's econometrics package
 [cycle_ADF, trend_ADF] = BoostedHP(IRE, lambda, iter, stopping);
 
 %% If stopping = "nonstop",
