@@ -105,7 +105,6 @@ BoostedHP = function(x, lambda = 1600, iter= TRUE, stopping = "nonstop", sig_p =
         
         adf_p[r] <- adf_p_r
         
-        sig_p = sig_p # + 0.001 # due to the way that R reports the p-value
         if(stopping == "adf")   stationary <- (adf_p_r <= sig_p)
         
         
