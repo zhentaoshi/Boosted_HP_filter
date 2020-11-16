@@ -84,7 +84,7 @@ library(reshape2)
 library(gridExtra)
 library(lattice)
 
-# graph 1
+
 
 data.simple = data.frame(year = 1981:2016, minus_unemployment = -une_cyc_raw/100, GDP = gdp_cyc_raw)
 data.simple = melt(data.simple, measure.vars = c( "GDP", "minus_unemployment") )
@@ -96,24 +96,8 @@ theme1 = theme_bw() +  theme(axis.title.x = element_blank(),
                              legend.title = element_blank(),
                              legend.text = element_text( size = 12))
 
-p1 = ggplot(data.simple) + geom_line(aes( x = year, y = value, color = series, lty = series), lwd = 2) + theme1
-p1 = p1 +  labs( x = "", y = "") +
-  ggtitle( "Simple HP filter. GDP (solid red) vs. (negative) employment (dash blue) " )
-p1 = p1 + scale_color_manual(values=c("red", "blue"))
 
 
-# graph 2
-
-data.iter = data.frame(year = 1981:2016, minus_unemployment = -une_hp_cyc/100, GDP = gdp_hp_cyc)
-data.iter = melt(data.iter, measure.vars = c( "GDP", "minus_unemployment") )
-names(data.iter)[2] = "series"
-
-p2 = ggplot(data.iter) + geom_line(aes( x = year, y = value, color = series, lty = series), lwd = 2) + theme1
-p2 = p2 +  labs( x = "", y = "") + 
-  ggtitle( "Iterated HP filter stopped by ADF. GDP (19 iter., solid red) vs. (negative) employment (2 iter., dash blue)" )
-p2 = p2 + scale_color_manual(values=c("red", "blue"))
-
-# graph 3
 data.gdp = data.frame(year = 1981:2016, HP = gdp_cyc_raw, ADF = gdp_hp_cyc, BIC = gdp_bic)
 data.gdp = melt(data.gdp, measure.vars = c( "HP", "ADF", "BIC") )
 
@@ -123,12 +107,12 @@ data.gdp$variable = revalue( data.gdp$variable, c("ADF" = "bHP-ADF") )
 
 names(data.gdp)[2] = "series"
 
-p3 = ggplot(data.gdp) + geom_line(aes( x = year, y = value, color = series), lwd = 2) + theme1
+p3 = ggplot(data.gdp) + geom_line(aes( x = year, y = value, color = series) ) + theme1
 p3 = p3 +  labs( x = "", y = "") +   theme( legend.position = "none" ) +ggtitle( "GDP")
 
 
 ##########################3
-# graph 4
+
 data.une = data.frame(year = 1981:2016, HP = -une_cyc_raw/100, ADF = -une_hp_cyc/100, BIC = -une_bic/100 )
 data.une = melt(data.une, measure.vars = c( "HP", "ADF", "BIC") )
 
@@ -138,7 +122,7 @@ data.une$variable = revalue( data.une$variable, c("ADF" = "bHP-ADF") )
 
 names(data.une)[2] = "series"
 
-p4 = ggplot(data.une) + geom_line(aes( x = year, y = value, color = series ), lwd = 2) + theme1
+p4 = ggplot(data.une) + geom_line(aes( x = year, y = value, color = series ) ) + theme1
 p4 = p4 +  labs( x = "", y = "") + theme( legend.position = "bottom" ) + ggtitle( "(negative) unemployment rate" )
 
 
