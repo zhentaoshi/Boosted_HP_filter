@@ -157,13 +157,13 @@ theme1 = theme_bw( # base_family = "Times New Roman"
   ) +  theme(legend.title.align = 0.5, 
         plot.title = element_text(hjust = 0.5),
         legend.position="bottom", 
-        text = element_text(size = 10),
-        legend.title=element_text(size=8),
+        text = element_text(size = 22),
+        legend.title=element_text(size=22),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
-        axis.text = element_text(size=8),
-        axis.title = element_text(size=8),
-        legend.text=element_text(size=8)
+        axis.text = element_text(size=22),
+        axis.title = element_text(size=22),
+        legend.text=element_text(size=22)
         )
 
 
@@ -226,10 +226,12 @@ p2 <- p2 + ylab(" ")  + xlab("")
 
 #####################3
 
-print(p1)
 
 
-ggsave("Figure1.pdf", plot = p1, width = 15, height = 16, units = "cm", dpi = 1000 )
+cairo_pdf( "Figure1.pdf", width = 15, height = 16, family = "Times", fallback_resolution = 1000)
+  print(p1)
+dev.off()
+# ggsave("Figure1.pdf", plot = p1, width = 15, height = 16, units = "cm", dpi = 1000 )
 
 summ = ddply(.data = data_ggplot, .(type, iteration), summarize,  sq_dev = sum( dev_trend^2 )   )
 print(summ)
