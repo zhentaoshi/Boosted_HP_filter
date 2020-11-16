@@ -116,9 +116,6 @@ for(i in 1:length(type)){
 
 #-----------------------------------------------combined graph produced by ggplot--------------------------------------------------------
 
-
-#------------------------------------------------- manage the data for ggplot------------------------------------------------------------
-
 iteration <- paste0("m = ",pick_iter)
 
 #structure break
@@ -151,7 +148,6 @@ trend$trend <- rep(f_tr+x1, length( iteration ) )
 data_ggplot <- rbind(structurebreak,random,trend)
 names(data_ggplot) <- c("ID","iteration","value","type","rawdata", "deter", "trend")
 data_ggplot$iteration <- factor(data_ggplot$iteration,levels = paste0("m = ",pick_iter))
-# data_ggplot$type <- factor(data_ggplot$type,levels = c("random","trend","structure break"))
 data_ggplot$type <- factor(data_ggplot$type,levels = c("Stoc. Trend",
                                                        "Stoc.+Deter. Trends",
                                                        "Stoc. Trend+Mean Shift"))
@@ -202,7 +198,6 @@ for ( jj in 1:3){
     est_trun = est_error[ 5:(n-4), ]
     
     var_all = apply(est_trun, 2, var)
-    # print(var_all)
     MSE_all[jj, ] = as.vector( var_all )
 
 }

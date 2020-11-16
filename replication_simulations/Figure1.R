@@ -207,7 +207,7 @@ p1 <- p1 + ylab(" ") + xlab("Time")
 
 
 
-########################3 rediausl
+########################3 residual
 data_ggplot$residual = data_ggplot$rawdata -   data_ggplot$value 
 data_ggplot$residual_true = data_ggplot$rawdata -   data_ggplot$trend
 data_ggplot$dev_trend = data_ggplot$value - data_ggplot$trend   
@@ -224,14 +224,12 @@ p2 <- p2 + facet_grid( type ~.  , scales = "free_y")
 p2 <- p2 +  theme1 + theme(legend.position="none" )
 p2 <- p2 + ylab(" ")  + xlab("") 
 
-#####################3
-
+#####################
 
 
 cairo_pdf( "Figure1.pdf", width = 15, height = 16, family = "Times", fallback_resolution = 1000)
   print(p1)
 dev.off()
-# ggsave("Figure1.pdf", plot = p1, width = 15, height = 16, units = "cm", dpi = 1000 )
 
 summ = ddply(.data = data_ggplot, .(type, iteration), summarize,  sq_dev = sum( dev_trend^2 )   )
 print(summ)
