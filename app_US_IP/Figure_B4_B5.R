@@ -3,10 +3,7 @@ rm(list = ls() )
 
 
 #Getting the recession data
-# library(quantmod); 
-# recession = getSymbols('USRECD',src='FRED', auto.assign=FALSE); 
-# save(recession, file = "USRECD.Rdata")
-load("USRECD.Rdata") 
+
 
 load(file = "residuals.Rdata")
 load(file = "residuals_y.Rdata")
@@ -61,12 +58,8 @@ graph_fun <- function(series_df, recess_df)  {
 }
 
 
-drecession <- diff(recession)
-recession.start <- time(drecession[drecession==1])
-recession.end <- time(drecession[drecession==-1])-30
-recession.df <- data.frame(recession.start
-                           ,recession.end[2:length(recession.end)])
-colnames(recession.df) <- c("start","end")
+load("date_recession.Rdata")
+
 
 recession_1919.df = recession.df[recession.df$start>=min(dcycle_1919$DATE),]
 recession_2000.df = recession.df[recession.df$start>=min(dcycle_2000$DATE),]
@@ -93,6 +86,7 @@ data_1919_IP <- dcycle_1919 %>%
 ggp_1919 = graph_fun(data_1919, recession_1919.df )
 ggp_1919_IP = graph_fun(data_1919_IP, recession_1919.df )
 ggp_1 = grid.arrange(ggp_1919_IP, ggp_1919, nrow=2)
+
 
 
 cairo_pdf( "FigureB4.pdf", 
