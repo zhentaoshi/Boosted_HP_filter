@@ -4,7 +4,7 @@
 
 This is the repository for 
 
-Peter Phillips and Zhentao Shi (2021): "[Boosting: Why You Can Use the HP Filter,](https://arxiv.org/abs/1905.00175)" International Economic Review*.
+Peter Phillips and Zhentao Shi, "[Boosting: Why You Can Use the HP Filter,](https://onlinelibrary.wiley.com/doi/10.1111/iere.12495)" *International Economic Review*, 62(2), 521-570
 
 
 
