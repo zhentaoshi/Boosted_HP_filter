@@ -24,6 +24,7 @@ Zhentao Shi, Yang Chen and Ziwei Mei
 
 
 ### Updates
+* 6/5/2022: [Replication2](https://zhentaoshi.github.io/Boosted_HP_filter/replications2/empirical2.html)
 * 11/18/2020: Replication files are added into the folder `replications`.
 * 8/27/2020: [python code](https://github.com/zhentaoshi/Boosted_HP_filter/tree/master/python) and [julia code](https://github.com/zhentaoshi/Boosted_HP_filter/tree/master/Julia) are added by Ziwei Mei. The bHP-ADF result are slightly different from that of the [R code](https://github.com/zhentaoshi/Boosted_HP_filter/tree/master/R) because the ADF tests cited in these languages. In the scripts, the testing examples immediately follow the main function.
 * 8/21/2020: [Matlab code](https://github.com/zhentaoshi/Boosted_HP_filter/tree/master/matlab) is added into the MATLAB folder. It produces exactly the same results as the [R code](https://github.com/zhentaoshi/Boosted_HP_filter/tree/master/R). We offer two scripts under these folders:
