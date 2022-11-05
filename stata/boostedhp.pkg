@@ -1,8 +1,0 @@
-v 1.0.0
-d 'BOOSTEDHP': Boosted Hodrick-Prescott Filter
-d 
-d Distribution-Date:   20221105
-d License: MIT
-d 
-F boostedhp.ado
-f boostedhp.sthlp
