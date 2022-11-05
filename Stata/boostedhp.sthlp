@@ -98,7 +98,7 @@ See the {browse "https://github.com/zhentaoshi/bHP_R_pkg/blob/master/vignettes/v
 
 {pstd}Use the original Hodrick-Prescott filter{p_end}
 {phang2}{inp:.} {stata "boostedhp gdp_ln, original smooth(1600)":boostedhp gdp_ln, original smooth(1600)}{p_end}
-{phang2}{inp:.} {stata "boostedhp gdp_ln, original smooth(1600) cycle(gdp_cycle_ori) trend(gdp_trend_ori)":boostedhp gdp_ln, original smooth(1600) cycle(gdp_cycle_hp) trend(gdp_trend_hp)}{p_end}
+{phang2}{inp:.} {stata "boostedhp gdp_ln, original smooth(1600) cycle(gdp_cycle_ori) trend(gdp_trend_ori)":boostedhp gdp_ln, original smooth(1600) cycle(gdp_cycle_ori) trend(gdp_trend_ori)}{p_end}
 
 {pstd}Compare with {manhelp hpfilter TS:hpfilter}{p_end}
 {phang2}{inp:.} {stata "hpfilter gdp_ln, trend(gdp_trend_hpfilter) cycle(gdp_cycle_hpfilter)":hpfilter gdp_ln, trend(gdp_trend_hpfilter) cycle(gdp_cycle_hpfilter)}{p_end}
