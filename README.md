@@ -9,7 +9,7 @@ Peter Phillips and Zhentao Shi, "[Boosting: Why You Can Use the HP Filter,](http
 
 
 It offers 
-* the function `BoostedHP` in `R`, `MATLAB`, `Python` and `Julia`.
+* the function `BoostedHP` in `R`, `STATA`, `MATLAB`, `Python` and `Julia`.
 * Replication code for simulations and empirical applications in the paper.
 
 
@@ -20,11 +20,12 @@ It offers
 
 
 ### Contributors
-Zhentao Shi, Yang Chen and Ziwei Mei
+Zhentao Shi, Yang Chen, Ziwei Mei and Shu Shen
 
 
 ### Updates
-* 6/5/2022: [Replication2](https://zhentaoshi.github.io/Boosted_HP_filter/replications2/empirical2.html)
+* 11/5/2022: [Stata code](https://github.com/zhentaoshi/Boosted_HP_filter/tree/master/Stata) added by Shu Shen.
+* 6/5/2022: [Replication2](https://zhentaoshi.github.io/Boosted_HP_filter/replications2/empirical2.html).
 * 11/18/2020: Replication files are added into the folder `replications`.
 * 8/27/2020: [python code](https://github.com/zhentaoshi/Boosted_HP_filter/tree/master/python) and [julia code](https://github.com/zhentaoshi/Boosted_HP_filter/tree/master/Julia) are added by Ziwei Mei. The bHP-ADF result are slightly different from that of the [R code](https://github.com/zhentaoshi/Boosted_HP_filter/tree/master/R) because the ADF tests cited in these languages. In the scripts, the testing examples immediately follow the main function.
 * 8/21/2020: [Matlab code](https://github.com/zhentaoshi/Boosted_HP_filter/tree/master/matlab) is added into the MATLAB folder. It produces exactly the same results as the [R code](https://github.com/zhentaoshi/Boosted_HP_filter/tree/master/R). We offer two scripts under these folders:
