@@ -17,7 +17,7 @@ Peter Phillips and Zhentao Shi, "[Boosting: Why You Can Use the HP Filter,](http
 Use the Stata command below to install the most recent published version of **boostedhp**. 
 
 ```
-    net install boostedhp , from("https://raw.githubusercontent.com/shenshuuu/boostedhp/main") replace
+    net install boostedhp , from("https://raw.githubusercontent.com/zhentaoshi/Boosted_HP_filter/master/Stata/") replace
 ```
 
 ### Requirements
