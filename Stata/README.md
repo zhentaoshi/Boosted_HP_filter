@@ -11,7 +11,7 @@ Peter Phillips and Zhentao Shi, "[Boosting: Why You Can Use the HP Filter,](http
 * Replication code for simulations and empirical applications in the paper.
 
 ### **Update**
-* 2022-11-5: [version 1.0.0](https://github.com/shenshuuu/boostedhp)
+* 2022-11-5: [version 1.0.0](https://github.com/zhentaoshi/Boosted_HP_filter/tree/master/Stata)
 
 ### **Install**
 Use the Stata command below to install the most recent published version of **boostedhp**. 
