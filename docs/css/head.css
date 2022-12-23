@@ -1,0 +1,93 @@
+body{
+				background-color: #ebe8e1;
+			}
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			#container{
+				width: 1200px;
+				margin: 0px auto; 
+				border: 1px solid #ccc;
+				background-image: url(../img/bg.jpg);
+				
+			}
+			/* 页头样式 */
+			.top_head{
+				background-color: #333333;
+				height: 100px;
+				color: #fff;	
+				line-height: 100px;
+				padding-left: 150px;
+			}
+			
+			.top_nav{
+				width: 1200px;
+				margin: 0px auto;
+				height:150px ;
+				position: absolute;
+				z-index:999
+			}
+			.top_nav ul{
+				list-style: none;
+			}
+			.top_nav>ul>li{
+				background-color: #232323;
+				line-height: 60px;
+				float: left;
+				margin: 0px;
+
+			}
+			.top_nav>ul>li>ul{
+				display: none;
+			}
+			.top_nav>ul>li:hover{
+				color: #fff;
+				border-bottom: 5px solid #FF8726;
+			}
+			.top_nav>ul>li:hover ul{
+				color: #FF8726;
+				display: block;
+				padding: 0px;
+			}
+			#ul_1>li:hover{
+				background-color: #FF8726 ;
+			}
+			#ul_1>li>a:hover{
+				color: #FFFFFF;
+			}
+			.top_nav a{
+				text-decoration: none;
+				padding: 10px 50px;
+				color: #fff;
+			}
+			.top_nav a:hover{
+				color: #ff8726;
+			}
+			#home_intro{
+				font-family: inherit;
+			}
+			#li_1{
+				margin-left:100px ;
+			}
+			#top_nav1{
+				height: 60px;
+				background-color: #232323;
+				position: static;
+			}
+			.ftgithub{
+				text-decoration: none;
+				color: #fff;
+			}
+			.ftgithub:hover{
+				color:#ff8726
+			}
+			/* 页脚样式 */
+			footer{ 
+				font-size:16px; 
+				background-color:#333333; 
+				color:#FFF; 
+				padding:20px 0px;
+				width: 1200px;
+				margin: 0px auto;
+				}
