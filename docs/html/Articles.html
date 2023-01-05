@@ -1,144 +1,72 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Chinese</title>
-		<link href="../css/head.css" rel="stylesheet"/>
-		<style type="text/css">
-			.box{
-				width: 1200px;
-				height: 1150px;
-				background-color: #FFFFFF;
-				font-size: 14px; 
-				font-family: "微软雅黑";
-				position: relative;
-			}
-			.box1, .box2{
-				width: 1000px;
-				height: 150px;
-				margin: auto;
-			}
-			.box2{
-				height: 800px;	
-			}
-			.code{
-				text-decoration: none;
-				font-weight: 550;
-			}
-			.code:hover{
-				color:#FF8726
-			}
-			.code:visited{
-				color: #33ff
-			}
-			.code:visited:hover{
-				color:#FF8726
-			}
-			.idcode{
-				text-decoration: none;
-				color: black;
-			}
-			.idcode:hover{
-				color:#FF8726
-			}
-			.left1{
-				width: 1000px;
-				height: 260px;
-				float: left;
-				padding-top:0px ;
-				margin-top: 30px;
-				margin-left: 40px;
-			}
-			.left1 li{
-				line-height: 50px;
-				color: #333;
-				font-size: large;
-			}
-			.left2{
-				width: 1000px;
-				height: 200px;
-				float: left;
-				padding-top:0px ;
-			}
-			.left2 li{
-				line-height: 40px;
-				color: #333;
-				font-size: large;
-			}
-			.line{
-				margin-top: 30px;
-				margin-left: 100px;
-			}
-			.h2{
-				padding-top: 20px;
-				padding-left: 30px;
-				margin-bottom: 20px;
-				font-size: x-large;
-			}
-			.h3{
-				font-size: large;
-				margin-top: 10px;
-				padding-left: 30px;
-			}
-			.shrink{
-				margin: -80px 0px -30px -30px;
-				transform:scale(0.9);
-				float: left;
-			}
-			.ani{
-				margin-left: 150px;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="container">
-			<div class="top_head">
-				<h2>Boosted Hodrick-Prescott Filter</h2>
-			</div>
-			<!-- 导航栏 -->
-			<div class="top_nav">
-				<ul>
-					<li id="li_1"><a href="../index.html">Home</a></li>
-					<li><a href="Paper.html">Papers</a></li>
-					<li><a href="Code.html" >Code</a></li>
-					<li><a href="Interactive.html">Interactive App</a></li>
-					<li><a href="Articles.html"  style="color: #FF8726;" >中文</a></li>
-				</ul>
-			</div>
-			<div id = top_nav1></div>
-			
-			<!-- 作品展示 -->
-			<div class="box">	
-				<div class="left1">
-				<h2 class="h2">专栏</h2>
-				<h2 class="h3">本人在 <a href="https://zhuanlan.zhihu.com/econometrics" target="_blank" class="code">知乎专栏</a> 会用中文简短介绍我近期的研究,
-					关于BoostedHP的后续进展可以关注我的知乎专栏。</h2>
-				<ul class="line">
-					<li>
-						<a href="https://zhuanlan.zhihu.com/p/548776876" target="_blank" class="idcode">Hodrick-Prescott 滤波器 (简称HP滤波器) 是宏观经济数据分析中的基本统计工具之一。它简单易用，已被广泛用于实证宏观经济学研究。近年来，由于世界宏观经济的波动，学术界开始重新关注研究其性质并对其进行扩展。尽管 Hamilton (2018) 反对使用 HP 滤波器，Phillips and Shi (2021) 提出了对原始 HP 滤波器的增强(boosting)，称为增强 HP 滤波器(简称bHP)，并在理论上证明了其在一定条件下的相合性。</a>
-					</li>
-					<li><a href="https://zhuanlan.zhihu.com/p/64489398" target="_blank" class="code">提升HP滤波器</a></li>	
-					<li><a href="https://zhuanlan.zhihu.com/p/592268744" target="_blank" class="code">提升HP滤波器的最新进展</a></li>
-				</ul>
-				<h2 class="h3">下方是BoostedHP的一个演示图:</h2>
-				<img src="../img/ADF_bHP_ani.gif" class="ani">
-				</div>
-			</div>
-				
-		</div>
-		<!--页脚-->
-		<footer>
-			<div>
-			  <div>
-				<div align="center">
-				Zhentao Shi 史震涛
-				&nbsp;&bull;&nbsp;
-				2022
-				&nbsp;&bull;&nbsp;
-				<a href="http://zhentaoshi.github.io/" target="_blank" class="ftgithub">zhentaoshi.github.io</a>
-				</div>
-			  </div>
-			</div>
-		</footer>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chinese</title>
+    <link rel="stylesheet" href="../css/page/head.css" />
+    <link rel="stylesheet" href="../css/md/base.css" />
+
+    <!--代码块高亮CSS-->
+    <link href="../css/md/default.min.css" rel="stylesheet" />
+    <!-- <link href="../css/md/monokai_sublime.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/color-brewer.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/ascetic.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/atom-one-light.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/arduino-light.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/brown-paper.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/foundation.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/gradient-light.min.css" rel="stylesheet"> -->
+    <style>
+      .ani {
+        margin-left: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header class="header">
+        <div class="top_head">
+          <h2>Boosted Hodrick-Prescott Filter</h2>
+        </div>
+
+        <!-- 导航栏 -->
+        <div class="top_nav">
+          <ul>
+            <li id="li_1"><a href="../index.html">Home</a></li>
+            <li><a href="Paper.html">Papers</a></li>
+            <li><a href="Code.html">Code</a></li>
+            <li><a href="Interactive.html">Interactive App</a></li>
+            <li><a href="Articles.html" style="color: #ff8726">中文</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- 作品展示 -->
+      <div id="content"></div>
+
+      <!--页脚-->
+      <footer>
+        <div>
+          <div>
+            <div align="center">
+              Zhentao Shi 史震涛 &nbsp;&bull;&nbsp; 2022 &nbsp;&bull;&nbsp;
+              <a href="http://zhentaoshi.github.io/" target="_blank" class="ftgithub">zhentaoshi.github.io</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/marked.min.js"></script>
+    <script src="../lib/highlight/highlight.min.js"></script>
+    <script src="../js/renderMark.js"></script>
+    <script>
+      $(document).ready(function () {
+        setTimeout(() => {
+          getMd('/md/Articles.md');
+        }, 100);
+      });
+    </script>
+  </body>
 </html>

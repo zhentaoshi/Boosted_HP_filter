@@ -1,0 +1,104 @@
+/*pre标签自适应*/
+pre {
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  overflow: auto;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #fafafa;
+  font-size: 18px;
+  text-align: justify;
+  word-break: break-all;
+}
+
+.language-javascript.hljs {
+  /*不加这个的话代码块过宽会被截取掉一部分*/
+  overflow-x: auto;
+}
+
+/*以下是对markdown样式的调整,根据个人喜好修改即可*/
+#content img {
+  max-width: 1000px;
+}
+
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+  position: relative;
+  font-weight: bold;
+  cursor: text;
+}
+
+#content {
+  padding: 0 30px;
+  line-height: 2;
+  margin-bottom: 30px;
+  flex:1;
+}
+
+#content h1 {
+  padding-bottom: 0.3em;
+  font-size: 40px;
+  border-bottom: 1px solid #eee;
+  color: #aa0000;
+}
+
+#content h2 {
+  padding: 20px;
+  color: black;
+  font-size: 30px;
+}
+
+#content h3{
+  padding: 10px;
+  color: black;
+  font-size: 20px;
+}
+
+#content h6{
+  color:#ff8726;
+  font-size:20px;
+}
+#content h6 a{
+  color:#ff8726;
+}
+#content .text-a a{
+  color: #333;
+  word-break: break-all;
+  line-height: 3;
+}
+#content .text-a a:hover{
+  color: #ff8788;
+}
+
+code {
+  /* border: 1px solid #e7eaed; */
+  font-family: monospace;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  padding: 0;
+  padding: 2px 4px 0px 4px;
+  font-size: 1em;
+}
+
+/* 内容格式,主要是UL li */
+#content ul {
+  padding: 0 40px;
+}
+#content ul li{
+  line-height: 40px;
+  font-size: large;
+}
+
+#content p>strong{
+  font-size: 30px;
+}
