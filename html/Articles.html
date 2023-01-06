@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chinese</title>
+    <link rel="stylesheet" href="../css/page/head.css" />
+    <link rel="stylesheet" href="../css/md/base.css" />
+
+    <!--代码块高亮CSS-->
+    <link href="../css/md/default.min.css" rel="stylesheet" />
+    <!-- <link href="../css/md/monokai_sublime.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/color-brewer.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/ascetic.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/atom-one-light.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/arduino-light.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/brown-paper.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/foundation.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/gradient-light.min.css" rel="stylesheet"> -->
+    <style>
+      .ani {
+        margin-left: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header class="header">
+        <div class="top_head">
+          <h2>Boosted Hodrick-Prescott Filter</h2>
+        </div>
+
+        <!-- 导航栏 -->
+        <div class="top_nav">
+          <ul>
+            <li id="li_1"><a href="../index.html">Home</a></li>
+            <li><a href="Paper.html">Papers</a></li>
+            <li><a href="Code.html">Code</a></li>
+            <li><a href="Interactive.html">Interactive App</a></li>
+            <li><a href="Articles.html" style="color: #ff8726">中文</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- 作品展示 -->
+      <div id="content"></div>
+
+      <!--页脚-->
+      <footer>
+        <div>
+          <div>
+            <div align="center">
+              Zhentao Shi 史震涛 &nbsp;&bull;&nbsp; 2022 &nbsp;&bull;&nbsp;
+              <a href="http://zhentaoshi.github.io/" target="_blank" class="ftgithub">zhentaoshi.github.io</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/marked.min.js"></script>
+    <script src="../lib/highlight/highlight.min.js"></script>
+    <script src="../js/renderMark.js"></script>
+    <script>
+      $(document).ready(function () {
+        setTimeout(() => {
+          getMd('/md/Articles.md');
+        }, 100);
+      });
+    </script>
+  </body>
+</html>
