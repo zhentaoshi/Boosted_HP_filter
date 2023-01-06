@@ -1,0 +1,11 @@
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+.box .water {
+  width: 80%;
+  margin-top: 40px;
+}
+.box .left ul li{
+  line-height: 400% !important;
+}

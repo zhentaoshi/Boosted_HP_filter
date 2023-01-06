@@ -1,137 +1,66 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Interactive Apps</title>
-		<link href="../css/head.css" rel="stylesheet"/>
-		<style type="text/css">
-			.box{
-				width: 1200px;
-				height: 1000px;
-				background-color: #FFFFFF;
-				font-size: 14px; 
-				font-family: "微软雅黑";
-				position: relative;
-			}
-			.box1, .box2{
-				width: 1000px;
-				height: 150px;
-				margin: auto;
-			}
-			.box2{
-				height: 800px;	
-			}
-			.code{
-				text-decoration: none;
-				font-weight: 550;
-				color:#FF8726;
-			}
-			.code:hover{
-				color: blue;
-			}
-			.idcode{
-				text-decoration: none;
-				color: black;
-			}
-			.idcode:hover{
-				color:#FF8726
-			}
-			.left1{
-				width: 1000px;
-				height: 260px;
-				float: left;
-				padding-top:0px ;
-				margin-top: 30px;
-				margin-left: 40px;
-			}
-			.left1 li{
-				line-height: 50px;
-				color: #333;
-				font-size: large;
-			}
-			.left2{
-				width: 1000px;
-				height: 200px;
-				float: left;
-				padding-top:0px ;
-			}
-			.left2 li{
-				line-height: 40px;
-				color: #333;
-				font-size: large;
-			}
-			.line{
-				margin-top: 30px;
-				margin-left: 100px;
-			}
-			.h2{
-				padding-top: 20px;
-				padding-left: 30px;
-				margin-bottom: 20px;
-				font-size: large;
-			}
-			.h3{
-				font-size: large;
-				margin-top: 10px;
-				padding-left: 30px;
-			}
-			.shrink{
-				margin: -80px 0px -30px -30px;
-				transform:scale(0.75);
-				float: left;
-			}
-			.code:visited{
-				color: #33ff
-			}
-			.code:visited:hover{
-				color:#FF8726
-			}
-		</style>
-	</head>
-	<body>
-		<div id="container">
-			<div class="top_head">
-				<h2>Boosted Hodrick-Prescott Filter</h2>
-			</div>
-			<!-- 导航栏 -->
-			<div class="top_nav">
-				<ul>
-					<li id="li_1"><a href="../index.html">Home</a></li>
-					<li><a href="Paper.html">Papers</a></li>
-					<li><a href="Code.html" >Code</a></li>
-					<li><a href="Interactive.html" style="color: #FF8726;" >Interactive App</a></li>
-					<li><a href="Articles.html">中文</a></li>
-				</ul>
-			</div>
-			<div id = top_nav1></div>
-			
-			<!-- 作品展示 -->
-			<div class="box">	
-				<div class="left1">
-				<h2 class="h2">We have Interactive Graph <b>Shiny App</b> and Cloud Platform <b>Gitpod</b> for replication and demonstration.</h2>
-				<h2 class="h3"><a href="https://zwmei-metrics.shinyapps.io/boosted_hp_app/" target="_blank" class="code">Shiny App</a></h2>
-				<iframe class="shrink" src="https://zwmei-metrics.shinyapps.io/boosted_hp_app/" width="1200" height="800" scrolling="auto" frameborder="0.2"></iframe>
-				<h2 class="h3"><a href="https://gitpod.io/#/github.com/zhentaoshi/bHP_R_pkg" target="_blank" class="code">Gitpod Cloud</a></h2>
-				<ul class="line">
-					<li>The Cloud Platform provides the environment with required extensions and packages. Therefore, we can use this environment to explore the function BoostedHP.</li>
-				</ul>
-				</div>
-			</div>
-				
-		</div>
-		<!--页脚-->
-		<footer>
-			<div>
-			  <div>
-				<div align="center">
-				Zhentao Shi 史震涛
-				&nbsp;&bull;&nbsp;
-				2022
-				&nbsp;&bull;&nbsp;
-				<a href="http://zhentaoshi.github.io/" target="_blank" class="ftgithub">zhentaoshi.github.io</a>
-				</div>
-			  </div>
-			</div>
-		</footer>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Interactive Apps</title>
+    <link rel="stylesheet" href="../css/page/head.css" />
+    <link rel="stylesheet" href="../css/md/base.css" />
+
+    <!--代码块高亮CSS-->
+    <link href="../css/md/default.min.css" rel="stylesheet" />
+    <!-- <link href="../css/md/monokai_sublime.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/color-brewer.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/ascetic.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/atom-one-light.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/arduino-light.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/brown-paper.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/styles/foundation.min.css" rel="stylesheet"> -->
+    <!-- <link href="../lib/highlight/gradient-light.min.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <div id="container">
+      <header class="header">
+        <div class="top_head">
+          <h2>Boosted Hodrick-Prescott Filter</h2>
+        </div>
+        <!-- 导航栏 -->
+        <div class="top_nav">
+          <ul>
+            <li id="li_1"><a href="../index.html">Home</a></li>
+            <li><a href="Paper.html">Papers</a></li>
+            <li><a href="Code.html">Code</a></li>
+            <li><a href="Interactive.html" style="color: #ff8726">Interactive App</a></li>
+            <li><a href="Articles.html">中文</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- 作品展示 -->
+        <div id="content"></div>
+
+      <!--页脚-->
+      <footer>
+        <div>
+          <div>
+            <div align="center">
+              Zhentao Shi 史震涛 &nbsp;&bull;&nbsp; 2022 &nbsp;&bull;&nbsp;
+              <a href="http://zhentaoshi.github.io/" target="_blank" class="ftgithub">zhentaoshi.github.io</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/marked.min.js"></script>
+    <script src="../lib/highlight/highlight.min.js"></script>
+    <script src="../js/renderMark.js"></script>
+    <script>
+      $(document).ready(function () {
+        setTimeout(() => {
+          getMd('/md/Interactive.md');
+        }, 100);
+      });
+    </script>
+  </body>
 </html>
