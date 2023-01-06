@@ -1,5 +1,6 @@
 ## 专栏
-### 本人在 [知乎专栏](https://zhuanlan.zhihu.com/econometrics) 会用中文简短介绍我近期的研究, 关于BoostedHP的后续进展可以关注我的知乎专栏。
+<!-- 
+### 本人在 [知乎专栏](https://zhuanlan.zhihu.com/econometrics) 会用中文简短介绍我近期的研究, 关于BoostedHP的后续进展可以关注我的知乎专栏。 -->
 
 <div class="text-a">
 
