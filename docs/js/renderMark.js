@@ -2,7 +2,7 @@ function getMd(url) {
   let rendererMD = new marked.Renderer();
   $.ajax({
     type: 'get',
-    url: url,
+    url: '/'+repositoryName+url,
     async: false,
     dataType: "html",
     success: function (res) {
@@ -31,7 +31,11 @@ function getMd(url) {
       })
 
       // a标签新窗口打开
-      $('#content a').attr('target','_blank')
+      $('#content a').attr('target', '_blank')
+
+      // 修改图片地址,加上仓库名
+      const images = $('#content img');
+      images.attr('src', '/' + repositoryName + images.attr('src'))
     }
   })
 }
