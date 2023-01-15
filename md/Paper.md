@@ -1,8 +1,6 @@
 ## Papers
 
-- Phillips and Shi (2021), "Boosting: Why You Can Use the HP Filter", International Economic Review, 62(2): 521-570.[arXiv: 1905.00175]
-
-  - [Slides](https://onlinelibrary.wiley.com/doi/10.1111/iere.12495)
+- Phillips and Shi (2021), ["Boosting: Why You Can Use the HP Filter"](https://onlinelibrary.wiley.com/doi/full/10.1111/iere.12495), International Economic Review, 62(2): 521-570.[arXiv: 1905.00175]
 
   - [Google Citation](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14955864019489146300,15965348781506834717,6866312010849538862&as_sdt=5)
 
@@ -13,7 +11,9 @@
 
 - Phillips and Jin (2021),["Business Cycles, Trend Elimination, and the HP Filter"](https://onlinelibrary.wiley.com/doi/full/10.1111/iere.12494), International Economic Review, 62(2): 469-520.
 
-- Hamilton (2018),[ "Why You Should Never Use the Hodrick-Prescott Filter"](https://direct.mit.edu/rest/article/100/5/831/58479/Why-You-Should-Never-Use-the-Hodrick-Prescott), Review of Economics and Statistics, 62(2): 469-520.
+- Hamilton (2018), ["Why You Should Never Use the Hodrick-Prescott Filter"](https://direct.mit.edu/rest/article/100/5/831/58479/Why-You-Should-Never-Use-the-Hodrick-Prescott), Review of Economics and Statistics, 62(2): 469-520.
+
+- Biswas, Sabzikar and Phillips (2022),  ["Boosting the HP Filter for Trending Time Series with Long Range Dependence"](https://cowles.yale.edu/research/cfdp-2347-boosting-hp-filter-trending-time-series-long-range-dependence), Cowles Foundation Research Paper CFDP 2347
 
 ### Classical Papers
   - Hodrick and Prescott (1997), ["Postwar U.S. Business Cycles: An Empirical Investigation"](https://www.jstor.org/stable/2953682#metadata_info_tab_contents), Journal of Money, Credit, and Banking, 1-16.

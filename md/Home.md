@@ -3,9 +3,8 @@
 
 ## Boosted HP Filter
 
-- Boosted HP Filter is a procedure of iterating the HP filter to produce a smarter smoothing device.
+- Boosted HP Filter is automatically iterates the HP filter to decompose a time series into a trend and a cycle.
 - The algorithm is based on L2-boosting in machine learning.
-- This page provides detailed information on the Boosted HP
 </div>
 
 <div class="right">
